@@ -1,9 +1,0 @@
-1. pg_dump -U postgres -Fc firma > firma_backup.sql
-3. pg_restore -U postgres -d firma firma_backup.sql
-7. 
-CREATE VIEW log_depart AS 
-SELECT emp.LoginID, dep.Name
-FROM AdventureWorks2017.HumanResources.Department dep, 
-AdventureWorks2017.HumanResources.EmployeeDepartmentHistory dephist, 
-AdventureWorks2017.HumanResources.Employee emp 
-WHERE dep.DepartmentID= dephist.DepartmentID AND emp.BusinessEntityID = dephist.BusinessEntityID;
